@@ -40,9 +40,12 @@ templates/       题解、学习记录模板
 - Python：3.13.13
 - Git：2.54.0
 - 当前阶段：Phase 0，Python 手写能力与复杂度基础
+- 日常投入：约 2 小时，每周 14–20 小时
+- 求职启动：2026-09-20；训练冲刺持续至 2026-09-26
+- 目标：MSRA、国内大厂人才计划；暂不训练英文面试表达
 - 下一步：完成第一次基线诊断，再按结果调整节奏
 
-详细计划见 [docs/roadmap.md](docs/roadmap.md)，实时状态见 [docs/progress.md](docs/progress.md)。
+详细计划见 [docs/roadmap.md](docs/roadmap.md) 和 [docs/sprint_plan.md](docs/sprint_plan.md)，实时状态见 [docs/progress.md](docs/progress.md)。
 
 ## 常用命令
 
@@ -57,4 +60,3 @@ python -m unittest discover -s problems -p "test_*.py"
 git status
 git diff
 ```
-

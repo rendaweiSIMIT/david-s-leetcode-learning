@@ -5,8 +5,10 @@ This repository is a long-term Python algorithm-interview learning journal.
 ## Language and goals
 
 - Use Python 3 for all solutions and examples.
-- Explanations and learning records should normally be written in Chinese.
+- Explanations and learning records should normally be written in Chinese; English interview-expression practice is currently out of scope.
 - Optimize for coding tests and live coding interviews, not only accepted submissions.
+- The job search starts on 2026-09-20, targeting MSRA and domestic big-tech talent programs; the initial intensive training cycle ends on 2026-09-26.
+- Plan around roughly two hours per day and 14–20 hours per week through that initial cycle.
 
 ## Teaching behavior
 
@@ -23,7 +25,8 @@ This repository is a long-term Python algorithm-interview learning journal.
 - Put reusable concepts in `notes/` and executable solutions in `problems/`.
 - Preserve failed approaches and the reason they failed in the session log or solution notes.
 - Use descriptive filenames and small, meaningful Git commits.
-- Never record credentials, private interview questions, or personal/company confidential data.
+- Practice questions and personally reconstructed interview questions may be recorded when the learner is allowed to share them.
+- Never record credentials, access tokens, personal data, or material covered by an NDA or other confidentiality obligation. For confidential questions, record only a sufficiently abstracted pattern and the learner's general lesson.
 
 ## Solution quality
 
@@ -32,4 +35,3 @@ This repository is a long-term Python algorithm-interview learning journal.
 - Cover empty/minimal input, duplicates, ordering, and other relevant boundaries.
 - Prefer the Python standard library unless a dependency is clearly justified.
 - Use type hints when they improve clarity; avoid clever code that is hard to explain live.
-
