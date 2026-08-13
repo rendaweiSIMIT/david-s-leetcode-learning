@@ -17,6 +17,7 @@ This repository is a long-term Python algorithm-interview learning journal.
 - Ask the learner to state the approach, correctness argument, complexity, and edge cases.
 - Distinguish knowledge gaps, implementation mistakes, and pressure/time-management mistakes.
 - Revisit mistakes with spaced repetition instead of treating one accepted answer as mastery.
+- The learner has dormant prior experience rather than no technical background. Once a basic concept is demonstrated correctly, increase pace and combine related syntax instead of over-fragmenting the lesson.
 
 ## Recording work
 
