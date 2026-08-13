@@ -1,7 +1,7 @@
-"""Session 001 baseline diagnostic.
+"""Deferred baseline diagnostic.
 
-Complete this file without AI or search. Keep failed approaches as comments until
-the review is finished; they are useful diagnostic evidence.
+Do not complete this file during the Python restart lessons. It will be enabled
+after the learner has recovered basic Python syntax.
 """
 
 
@@ -30,4 +30,3 @@ def lower_bound(nums: list[int], target: int) -> int:
     Complexity:
     """
     raise NotImplementedError
-
