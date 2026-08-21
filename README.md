@@ -46,7 +46,7 @@ templates/       题解、学习记录模板
 - 目标：MSRA、国内大厂人才计划；暂不训练英文面试表达
 - 下一步：完成 Lesson 001，重新熟悉运行、变量、列表、判断、循环和函数
 
-详细计划见 [docs/roadmap.md](docs/roadmap.md) 和 [docs/sprint_plan.md](docs/sprint_plan.md)，实时状态见 [docs/progress.md](docs/progress.md)。
+详细计划见 [docs/roadmap.md](docs/roadmap.md)、[docs/curriculum.md](docs/curriculum.md) 和 [docs/sprint_plan.md](docs/sprint_plan.md)，实时状态见 [docs/progress.md](docs/progress.md)。
 
 ## 常用命令
 
