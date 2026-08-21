@@ -38,4 +38,25 @@ counts[value] = counts.get(value, 0) + 1
 - 单次集合/字典查询与写入：平均/期望 `O(1)`，极端冲突时最坏 `O(n)`。
 - 创建包含 `n` 个元素的集合或字典仍需处理这 `n` 个元素，因此为平均 `O(n)`。
 
+### 哈希值如何变成槽位
+
+简化模型中，若内部表有 `m` 个槽位，可以用 `hash(key) % m` 把任意大小的哈希整数压缩到 `0` 至 `m - 1`。CPython 将表大小设计为 2 的幂，初始槽位可用更快的位运算表示：
+
+```text
+mask = table_size - 1
+initial_index = hash(key) & mask
+```
+
+例如表大小为 8，则 `mask = 7`。若某个键的哈希值是 42，初始槽位为 `42 & 7 = 2`。
+
+不同键可能得到相同初始槽位，这称为哈希冲突。CPython 使用开放寻址：先比较槽位中的哈希和键；不匹配时，根据当前槽位及哈希的其他位计算后续探测位置，直到找到目标键或空槽位。字典实现中的探测序列使用 `5*j + 1` 和逐步右移的 `perturb`；集合实现也使用掩码、线性探测和 `perturb`。表还会在变得较满时扩容，以降低正常查询所需的探测次数。
+
+这些公式属于 CPython 实现细节，不是算法面试需要背诵的模板。需要掌握的是：哈希值用于直接生成候选位置；冲突时只探测少数候选位置；因此平均 `O(1)`，最坏情况下仍可能 `O(n)`。
+
+参考：
+
+- [CPython 字典实现](https://github.com/python/cpython/blob/main/Objects/dictobject.c)
+- [CPython 集合实现](https://github.com/python/cpython/blob/main/Objects/setobject.c)
+- [Python FAQ：字典如何实现](https://github.com/python/cpython/blob/main/Doc/faq/design.rst)
+
 因此，保序去重对 `n` 个输入元素只遍历一次；集合查询和添加按平均 `O(1)` 计算，总时间为平均 `O(n)`，额外空间为 `O(n)`。极端哈希冲突下集合操作可能退化，但常规面试结论应明确说“平均/期望 `O(n)`”。

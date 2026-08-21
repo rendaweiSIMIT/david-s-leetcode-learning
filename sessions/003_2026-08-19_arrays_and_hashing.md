@@ -39,4 +39,5 @@ python -m unittest lessons.lesson_003_arrays_and_hashing.test_practice -v
 - 优化版首次错误：判断 `needed in seen` 后读取了 `seen[number]`；除 `number == needed` 的重复值案例外会触发 `KeyError`
 - 最终修正：读取 `seen[needed]`；理解集合只保存成员，字典保存键到附加信息的映射
 - 后续问题：为什么集合和字典检索不需要显式 `for`；由此进一步学习哈希函数、槽位定位、冲突与平均 `O(1)`
+- 底层追问：哈希值如何定位槽位；理解了“哈希值经取模/掩码得到初始数组下标，冲突后开放寻址继续探测”的简化模型，并区分算法原理与 CPython 探测公式的实现细节
 - 下一步：D+1 无提示复现字典版 Two Sum；进入双指针、滑动窗口与前缀和
